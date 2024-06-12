@@ -16,5 +16,5 @@ data:
         access_log off;
       }
     }
-  index: |
+  index.html: |
     <h1> Hello World </h1>
