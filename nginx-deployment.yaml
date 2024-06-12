@@ -46,4 +46,18 @@ spec:
             defaultMode: 420
             name: nginx-config
           name: nginx-config
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: nginx-example
+  name: nginx-svc
+  labels:
+    app: nginx
+spec:
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP

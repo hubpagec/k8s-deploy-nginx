@@ -11,7 +11,4 @@ spec:
   ports:
   - port: 9113
     name: metrics
-  - port: 80
-    targetPort: 80
-  type: ClusterIP
   
