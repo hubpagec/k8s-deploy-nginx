@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: nginx-example
+  name: nginx-svc
+  labels:
+    app: nginx
+spec:
+  selector:
+    app: nginx
+  ports:
+  - port: 9113
+    name: metrics
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
+  
